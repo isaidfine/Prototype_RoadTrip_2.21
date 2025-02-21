@@ -1,0 +1,10 @@
+# Unity Text Guidelines
+
+## Text Component Usage
+- For UI and 3D Text, always use TextMeshPro.
+- For TextMeshPro components, always use base class TMP_Text
+- Always Generate UI Text in English
+
+## Development Notes
+- You can @ files in documentation
+- You can use markdown formatting but it's optional 
