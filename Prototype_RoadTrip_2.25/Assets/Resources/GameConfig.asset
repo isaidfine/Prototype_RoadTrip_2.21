@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b134a026fb5fd4a44bb85d8a0fda7c2e, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: 
+  maxFuel: 20
+  maxStamina: 5
+  maxCarDurability: 10
+  fuelConsumptionPerMove: 0.5
+  staminaConsumptionPerMove: 0.2
+  carDurabilityConsumptionPerMove: 0.3
+  noRewardChance: 0.2
+  rewardChancePerFruit: 0.4
+  baseFruitValue: 30
+  fruitValueVariance: 0.2
+  floatingTextDuration: 1
+  floatingTextSpeed: 2
+  coinTextColor: {r: 1, g: 0.8113304, b: 0.03459108, a: 1}
+  lotteryAnimationDuration: 1
+  lotteryAnimationSpins: 10
+  fuelPrice: 5
+  baseFuelCapacityUpgradeCost: 80
+  upgradeCostMultiplier: 1.5
+  baseVehicleUpgradeCost: 150
+  sectionFruits:
+  - sectionName: Starting Area
+    availableFruits:
+    - fruitName: Apple
+      icon: {fileID: 21300000, guid: dbe9f0345d34ae44aad6fb0c14db9554, type: 3}
+      baseValue: 30
+    - fruitName: Avacado
+      icon: {fileID: 21300000, guid: 6f6a200a1fd9b8446a7e1c26c56d5d1e, type: 3}
+      baseValue: 30
+    - fruitName: Banana
+      icon: {fileID: 21300000, guid: d4fde6fbb76fa254983ee539698d2cd1, type: 3}
+      baseValue: 30
+    - fruitName: Lemon
+      icon: {fileID: 21300000, guid: e49f16fdf257e564f9516ee2f8a28682, type: 3}
+      baseValue: 30
+    - fruitName: Watermelon
+      icon: {fileID: 21300000, guid: 2a79fab314727cb4ca6f1df70c858cf0, type: 3}
+      baseValue: 30
+    valueMultiplier: 1
+  - sectionName: Middle Area
+    availableFruits:
+    - fruitName: coconut
+      icon: {fileID: 21300000, guid: 9ddf4d3996e709c47aef1b1c0722f7b2, type: 3}
+      baseValue: 30
+    - fruitName: blueberry
+      icon: {fileID: 21300000, guid: ac77d0d50b5a77b44830e2e74fb77c62, type: 3}
+      baseValue: 30
+    - fruitName: melon
+      icon: {fileID: 21300000, guid: 49556becd6625f3409f2f190864e1e86, type: 3}
+      baseValue: 30
+    - fruitName: peach
+      icon: {fileID: 21300000, guid: 1bb1c79019f80b14993b10160592c494, type: 3}
+      baseValue: 30
+    - fruitName: mango
+      icon: {fileID: 21300000, guid: e52235b2d5ff4104e9272c38407d8120, type: 3}
+      baseValue: 30
+    valueMultiplier: 1.2
+  - sectionName: Top Area
+    availableFruits:
+    - fruitName: 
+      icon: {fileID: 0}
+      baseValue: 0
+    - fruitName: 
+      icon: {fileID: 0}
+      baseValue: 0
+    - fruitName: 
+      icon: {fileID: 0}
+      baseValue: 0
+    - fruitName: 
+      icon: {fileID: 0}
+      baseValue: 0
+    - fruitName: 
+      icon: {fileID: 0}
+      baseValue: 0
+    valueMultiplier: 1.5
