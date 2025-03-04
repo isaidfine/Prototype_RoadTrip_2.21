@@ -98,16 +98,7 @@ public class GameManager : MonoBehaviour
             ResetGame();
         }
 
-        // 添加测试功能：按F1添加一点油
-        if (Input.GetKeyDown(KeyCode.F1))
-        {
-            var playerResources = FindFirstObjectByType<PlayerResources>();
-            if (playerResources != null)
-            {
-                playerResources.ModifyFuel(1);
-                Debug.Log("Added 1 fuel for testing");
-            }
-        }
+        // 移除F1添加燃油的测试功能，由PlayerController的调试按键取代
     }
 
     private void ResetGame()

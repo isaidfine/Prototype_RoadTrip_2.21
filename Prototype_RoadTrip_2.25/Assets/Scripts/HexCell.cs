@@ -62,13 +62,12 @@ public class GridCell : MonoBehaviour
         }
     }
 
-    private bool HasTown()
+    public bool HasTown()
     {
         return GetComponent<Town>() != null;
     }
 
-    // 新增：检查是否有事件
-    private bool HasEvent()
+    public bool HasEvent()
     {
         return gridEvent != null;
     }
@@ -114,7 +113,15 @@ public class GridCell : MonoBehaviour
             // 在格子中心绘制文本
             Vector3 position = transform.position;
             #if UNITY_EDITOR
-            UnityEditor.Handles.Label(position, marker);
+            // 创建GUIStyle来设置文本颜色
+            GUIStyle style = new GUIStyle();
+            style.normal.textColor = Color.red;
+            style.fontSize = 12;
+            style.fontStyle = UnityEngine.FontStyle.Bold;
+            style.alignment = TextAnchor.MiddleCenter;
+            
+            // 使用带样式的标签
+            UnityEditor.Handles.Label(position, marker, style);
             #endif
         }
         else if (!HasTown())
@@ -125,24 +132,38 @@ public class GridCell : MonoBehaviour
             System.Random pseudoRandom = new System.Random(hash);
             int resourceType = pseudoRandom.Next(3); // 0, 1, 2
             
+            // 创建一个新的随机数生成器，用于决定消耗的资源量（与PlayerController保持一致）
+            System.Random consumptionRandom = new System.Random(hash);  // 使用相同的hash以保持一致
+            bool consumeMoreResources = consumptionRandom.Next(2) == 0; // 50% 概率
+            int consumptionAmount = consumeMoreResources ? 2 : 1;
+            
             string marker = "";
             switch (resourceType)
             {
                 case 0:
-                    marker = "G"; // Gas/燃油
+                    marker = "G" + consumptionAmount; // Gas/燃油
                     break;
                 case 1:
-                    marker = "D"; // Durability/耐久
+                    marker = "D" + consumptionAmount; // Durability/耐久
                     break;
                 case 2:
-                    marker = "E"; // Energy/精力
+                    marker = "E" + consumptionAmount; // Energy/精力
                     break;
             }
             
-            Gizmos.color = Color.yellow;
+            // 将文字颜色设置为红色
+            Gizmos.color = Color.red;
             Vector3 position = transform.position;
             #if UNITY_EDITOR
-            UnityEditor.Handles.Label(position, marker);
+            // 创建GUIStyle来设置文本颜色
+            GUIStyle style = new GUIStyle();
+            style.normal.textColor = Color.red;
+            style.fontSize = 12;
+            style.fontStyle = UnityEngine.FontStyle.Bold;
+            style.alignment = TextAnchor.MiddleCenter;
+            
+            // 使用带样式的标签
+            UnityEditor.Handles.Label(position, marker, style);
             #endif
         }
     }

@@ -1043,7 +1043,7 @@ Transform:
   m_GameObject: {fileID: 754700071}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 11, z: 0}
+  m_LocalPosition: {x: 10, y: 16, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1502,7 +1502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventPrefab: {fileID: 437433926113271158, guid: 3953d5c97dcc064478a51dbe54084c82, type: 3}
-  targetY: 10
+  targetY: 16
   useRandomGeneration: 1
   tunnelWidth: 11
   tunnelStartX: 5
