@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "My project.sln"
+    "dotnet.defaultSolution": "Prototype_RoadTrip_2.25.sln"
 }

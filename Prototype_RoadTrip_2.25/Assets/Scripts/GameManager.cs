@@ -25,6 +25,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        // 初始化事件生成器
+        EventGenerator eventGenerator = FindFirstObjectByType<EventGenerator>();
+        if (eventGenerator != null)
+        {
+            eventGenerator.GenerateEvents();
+        }
+    }
+
     public FruitData[] GetRandomLotteryFruits(int sectionIndex)
     {
         if (sectionIndex >= gameConfig.sectionFruits.Length)

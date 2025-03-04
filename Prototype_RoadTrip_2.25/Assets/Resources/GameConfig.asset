@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b134a026fb5fd4a44bb85d8a0fda7c2e, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  maxFuel: 20
-  maxStamina: 5
+  maxFuel: 10
+  maxStamina: 10
   maxCarDurability: 10
   fuelConsumptionPerMove: 0.5
   staminaConsumptionPerMove: 0.2
